@@ -53,7 +53,7 @@ body {
     position: relative;
 }
 
-/* Start Genaral  */
+/* Start Genaral */
 .container {
     --padding: 2.5rem 0.3125rem;
     --margin-top: 0;
@@ -263,8 +263,9 @@ ul {
 }
 
 .btn-group .btn {
-    flex-basis: 33%;
-    width: 200px;
+    flex-basis: 40%;
+    /* align-self: flex-start; */
+    /* width: 200px; */
     background-color: var(--color-primary);
     color: var(--color-light-grey);
     padding: 20px;
@@ -273,6 +274,7 @@ ul {
     justify-content: center;
     border-radius: 30px;
     transition: var(--animation-duration);
+
 }
 
 .btn-group .btn:hover {
@@ -313,7 +315,7 @@ ul {
     
     display: flex;
     align-items: center;
-    width: 200px;
+   flex-basis: 40%;
     border-radius: 30px;
     position: relative;
     font-weight: 600;
@@ -437,19 +439,21 @@ color:#37373fe6;
     --img-p-color: #dddddd;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: column; 
     gap: 20px;
+    /* height: 1200px; */
 }
 
-/* .gallery .g-column {
-    display: flex;
-    flex-direction: column;
-} */
+ .gallery .g-column {
+  
+} 
 
 .gallery .garllery-img {
-    border: 4px solid white;
+    /* width: calc(calc(100% - 20px * 2) ); */
+    border: 4px solid #fff;
     position: relative;
     overflow: hidden;
+   
 }
 
 .gallery .garllery-img .img-text {
@@ -522,16 +526,12 @@ color:#37373fe6;
 .contact-info .info {
     padding: 15px;
     background-color: var(--info-s-bg-color);
-    flex: 1 1 50%;
-    /* flex-basis: 48%; */
+    flex: 1 1 100%;
     display: flex;
     column-gap: 10px;
 }
 
-/* .contact-info .info .info-detail {
-display: flex;
-flex-direction: column;
-} */
+
 
 .contact-info .info .info-icon {
     display: flex;
@@ -592,13 +592,13 @@ flex-direction: column;
 }
 
 .contact .contact-box form input.name {
-    flex-basis: 49%;
-    flex-grow: 1;
+    flex-basis: 100%;
+    /* flex-grow: 1; */
 }
 
 .contact .contact-box form input.email {
-    flex-basis: 49%;
-    flex-grow: 1;
+    flex-basis: 100%;
+    /* flex-grow: 1; */
 }
 
 .contact .contact-box form input.subject {
@@ -785,11 +785,17 @@ color: var(--color-primary);
 }
 /* End Footer */
 
+
+@media (max-width: 400px){
+  .btn-group {
+    flex-direction: column;
+}
+}
 /* Small devices  */
 @media screen and (max-width:640px) {
-    .btn-group {
+    /* .btn-group {
         flex-direction: column;
-    }
+    } */
 }
 
 /*  Medium devices */
@@ -799,13 +805,14 @@ color: var(--color-primary);
     }
 
     .gallery {
-
-        flex-direction: column;
-        height: 1800px
+        /* align-items: flex-start; */
+        /* flex-direction: column;
+        flex-wrap: wrap; */
+        height: 1600px;
     }
 
     .gallery .garllery-img {
-        width: 49%;
+        width: 48%;
     }
 
  
@@ -843,7 +850,7 @@ color: var(--color-primary);
     }
 
     .header {
-        padding: 0;
+        padding-top: 50px;
     }
 
     .header .container {
@@ -883,17 +890,43 @@ color: var(--color-primary);
         column-gap: 20px;
         justify-content: space-between;
     }
-
+/* 
     .gallery {
 
-        flex-direction: column;
-        height: 2200px
+        flex-direction: column; */
+        /* height: 2200px;
+    } */
+
+    .gallery {
+        height: 1100px;
+    }
+    .gallery .garllery-img {
+        width: 32%;
+    }
+    .contact .contact-box form{
+        column-gap: 20px;
+    }
+    .contact .contact-box form input.name {
+        flex-basis:48%;
+        flex-grow: 1;
+    }
+    
+    .contact .contact-box form input.email {
+        flex-basis:48%;
+        flex-grow: 1;
     }
 
     .contact-info .info {
         flex-basis: 48%;
     }
-  
+    .main-pic{
+        flex-basis: 40%;
+        /* flex-grow: 1; */
+    }
+    .container .main-content{
+        flex-basis: 40%;
+        /* flex-grow: 1 ; */
+    }
 
 }
 
@@ -930,12 +963,21 @@ color: var(--color-primary);
     }
 
     /* ---------------- End-Navbar-------------- */
+    /* .main-pic{
+        flex-basis: 35%;
+        /* flex-grow: 1; */
+    }
+    .main-content{
+        flex-basis: 35%;
+        /* flex-grow: 1 ; */
+    } 
     .gallery {
-        height: 1300px;
+        /* height: 1200px; */
     }
 
+
     .gallery .garllery-img {
-        width: calc(calc(100% - 20px * 2) / 3);
+        /* width: 32%; */
     }
     .footer .container{
         flex-wrap: nowrap;
@@ -954,7 +996,7 @@ color: var(--color-primary);
         flex-basis: 33.33%;
     }
 
-}
+
 
 @media screen and (min-width: 1536px) {
     .container {
@@ -962,7 +1004,7 @@ color: var(--color-primary);
     }
 
     .gallery {
-        height: 1600px;
+        /* height: 1600px; */
     }
     
   
