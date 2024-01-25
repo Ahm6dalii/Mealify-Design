@@ -51,7 +51,7 @@ body {
     --padding: 2.5rem 0.3125rem;
     --margin-top: 0;
     --margin-bottom: 0;
-    width: 95%;
+    width: 90%;
     margin: auto;
 }
 
@@ -91,7 +91,6 @@ ul {
 /* End Genaral */
 
 /* Start Nav */
-
 .navbar {
     background-color: var(--color-bg-dark);
     position: fixed;
@@ -123,19 +122,38 @@ ul {
 
 /* ----------------Nav-Menu---------------- */
 .navbar .nav-menu {
-    display: none;
+    /* display: none; */
     font-size: 1.0625rem;
     font-weight: 600;
     color: var(--color-gray);
+    position: absolute;
+    background-color: #eee;
+    width: 25%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 10;
+    transition: 1s all;
+    transform: translateX(400px);
 }
-
+.navbar .nav-menu label {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 20px;
+}
+.navbar .nav-menu label i {
+    position: absolute;
+}
+.navbar .nav-menu label .close {
+    position: absolute;
+    display: none;
+}
+.navbar .nav-menu ul li{
+    padding: 20px 5px;
+}
 .navbar .nav-menu ul li a {
     position: relative;
-}
-
-.navbar .nav-menu ul li a.active,
-.navbar .nav-menu ul li a:hover {
-    color: var(--color-secondary);
 }
 
 .navbar .nav-menu ul li a::before {
@@ -149,6 +167,7 @@ ul {
 }
 
 /* ----------------Nav-Icons---------------- */
+
 .nav-icons {
     display: flex;
 }
@@ -182,10 +201,19 @@ ul {
 .nav-icons .mode-group:has(.mode:checked) .light {
     transform: scale(1);
 }
-
+.nav-icons .menu-icon {
+    position: relative;
+}
 .nav-icons .menu-icon i {
     font-size: 30px;
     color: var(--color-secondary);
+    position: absolute;
+    left: 0;
+}
+.nav-icons .menu-icon input{
+    position: absolute;
+    left: 0;
+    display: none;
 }
 
 /* End Nav */
@@ -945,6 +973,9 @@ ul {
     /* ----------------Navbar-------------- */
     .navbar .nav-menu {
         display: inline-block;
+        position: static;
+        height: auto;
+        background-color: transparent;
     }
 
     .navbar .nav-menu ul {
@@ -1039,6 +1070,13 @@ ul {
 .navbar .nav-menu ul li:has(.active) a:before {
     width: 100%;
 }
+:root:has(.menu-ch:checked) .nav-menu  {
+    transform: translateX(0);
+}
+:root:has(.close:checked) .nav-menu  {
+    transform: translateX(300px);
+}
+
 
 :root:has(.mode:checked) .our-boxes .item .item-text::before {
     background-image: url("../image/team-shape-dark.svg");
