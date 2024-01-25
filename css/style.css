@@ -185,7 +185,7 @@ ul {
 
 .nav-icons .menu-icon i {
     font-size: 30px;
-    color: #ffffff;
+    color: var(--color-secondary);
 }
 
 /* End Nav */
