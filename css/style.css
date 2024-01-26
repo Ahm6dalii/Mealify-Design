@@ -121,7 +121,6 @@ ul {
 
 /* ----------------Nav-Menu---------------- */
 .navbar .nav-menu {
-    /* display: none; */
     font-size: 1.0625rem;
     font-weight: 600;
     color: var(--color-gray);
@@ -576,7 +575,7 @@ ul {
 .contact .contact-box form textarea {
     outline: none;
     padding: 20px;
-    resize: both;
+    resize: both; 
     overflow: auto;
 }
 
@@ -1010,6 +1009,9 @@ ul {
     body:has(.contact:target) li a[href="#contact"] {
     color:var(--color-secondary) !important;
 }
+a:hover{
+    color: #ffffff !important;
+ }
 
     /* ---------------- End-Navbar-------------- */
 
