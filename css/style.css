@@ -24,6 +24,8 @@
     --color-gray: #7d7d7d;
     /* <-----------------nav-section-color------------> */
     --color-bg-dark: #ffffff;
+    --translate:100%;
+    --translate-close:0px;
     /* <-----------------header-section-color------------> */
     --hover-bg-color: #e61414;
     /* <-----------------Contact-section-color------------> */
@@ -48,10 +50,7 @@ body {
 
 /* Start Genaral */
 .container {
-    --padding: 2.5rem 0.3125rem;
-    --margin-top: 0;
-    --margin-bottom: 0;
-    width: 90%;
+    width: 95%;
     margin: auto;
 }
 
@@ -127,30 +126,35 @@ ul {
     font-weight: 600;
     color: var(--color-gray);
     position: absolute;
-    background-color: #eee;
-    width: 25%;
+    background-color: #ffffff;
+    width: 77%;
     right: 0;
     top: 0;
     height: 100vh;
     z-index: 10;
     transition: 1s all;
-    transform: translateX(400px);
+    transform: translateX(100%);
 }
 .navbar .nav-menu label {
     position: absolute;
     right: 20px;
     top: 10px;
-    padding: 20px;
+    padding: 10px;
 }
 .navbar .nav-menu label i {
     position: absolute;
+    font-size: 20px;
+    font-weight: 800;
 }
 .navbar .nav-menu label .close {
     position: absolute;
     display: none;
 }
+.navbar .nav-menu ul{
+    margin-top: 50px;
+}
 .navbar .nav-menu ul li{
-    padding: 20px 5px;
+    padding: 15px 5px;
 }
 .navbar .nav-menu ul li a {
     position: relative;
@@ -207,7 +211,7 @@ ul {
 .nav-icons .menu-icon i {
     font-size: 30px;
     color: var(--color-secondary);
-    position: absolute;
+    /* position: absolute; */
     left: 0;
 }
 .nav-icons .menu-icon input{
@@ -976,10 +980,16 @@ ul {
         position: static;
         height: auto;
         background-color: transparent;
+        transform:translateX(0);
+        width: auto;
     }
 
     .navbar .nav-menu ul {
         display: flex;
+        margin-top: 0px;
+    }
+    .navbar .nav-menu label  {
+        display: none;
     }
 
     .navbar .nav-menu ul li {
@@ -993,6 +1003,13 @@ ul {
     .nav-icons .menu-icon {
         display: none;
     }
+    body:not(body:has(:target)) li a[href="#home"],
+    body:has(.home:target) li a[href="#home"], 
+    body:has(.s-gallery:target) li a[href="#s-gallery"],
+    body:has(.chefs:target) li a[href="#chefs"],
+    body:has(.contact:target) li a[href="#contact"] {
+    color:var(--color-secondary) !important;
+}
 
     /* ---------------- End-Navbar-------------- */
 
@@ -1067,27 +1084,36 @@ ul {
     --info-s-bg-color: #171717;
 }
 
-.navbar .nav-menu ul li:has(.active) a:before {
-    width: 100%;
-}
-:root:has(.menu-ch:checked) .nav-menu  {
-    transform: translateX(0);
-}
-:root:has(.close:checked) .nav-menu  {
-    transform: translateX(300px);
-}
 
-
-:root:has(.mode:checked) .our-boxes .item .item-text::before {
-    background-image: url("../image/team-shape-dark.svg");
-}
-
-body:not(body:has(:target)) li a[href="#home"],
+ /* <-----------------nav-section-------------> */
+ a:hover{
+    color: #171717;
+ }
+ :root:has(.menu-ch:checked) .nav-menu{
+    --translate:0;
+    --translate-close:100%;
+    }
+    
+    :root:has(.menu-ch:checked) .nav-menu  {
+        transform: translateX(var(  --translate));
+    }
+    :root:has(.close:checked) .nav-menu  {
+        transform: translateX(var(  --translate-close));
+    }
+  
+ body:not(body:has(:target)) li a[href="#home"],
 body:has(.home:target) li a[href="#home"],
 body:has(.s-gallery:target) li a[href="#s-gallery"],
 body:has(.chefs:target) li a[href="#chefs"],
 body:has(.contact:target) li a[href="#contact"] {
-    color: var(--color-secondary);
+    color:#171717;
+}
+
+.navbar .nav-menu ul li:has(.active) a:before {
+    width: 100%;
+}
+:root:has(.mode:checked) .our-boxes .item .item-text::before {
+    background-image: url("../image/team-shape-dark.svg");
 }
 body:not(body:has(:target)) li a[href="#home"]::before,
 body:has(.home:target) li a[href="#home"]::before,
