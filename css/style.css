@@ -226,7 +226,7 @@ ul {
 .header {
     display: flex;
     align-items: center;
-    padding: var(--section-padding-t) 0;
+    padding: 100px 0 60px 0;
     background-color: var(--color-light-grey);
 }
 
