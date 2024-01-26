@@ -210,7 +210,6 @@ ul {
 .nav-icons .menu-icon i {
     font-size: 30px;
     color: var(--color-secondary);
-    /* position: absolute; */
     left: 0;
 }
 .nav-icons .menu-icon input{
@@ -257,14 +256,24 @@ ul {
 }
 
 .header .container .main-pic:hover {
-    animation: vibrate .09s linear infinite alternate;
-    transition: .1s all;
+    animation: vibrate 1s linear infinite alternate;
+    transition: .5s all;
 }
 
 @keyframes vibrate {
-    to {
-        transform: rotate(2deg) translate(5px);
-    }
+   
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    
 }
 
 .btn-group {
@@ -848,6 +857,27 @@ ul {
     .gallery .garllery-img {
         width: 48%;
     }
+    .Pizza{
+        order: 1;
+    }
+    .Levitation{
+        order:3;
+    }
+    .Beef{
+        order:5;
+    }
+    .Frittata{
+        order:4;
+    }
+    .Burger{
+        order: 2;
+    }
+    .Crispy{
+        order: 6;
+    }
+    .kebab{
+        order:7;
+    }
 
     /* <------------End galary ----------> */
     /* <------------Start Footer ----------> */
@@ -949,7 +979,27 @@ ul {
     .gallery .garllery-img {
         width: 32%;
     }
-
+    .Pizza{
+        order: 1;
+    }
+    .Levitation{
+        order:2;
+    }
+    .Beef{
+        order:3;
+    }
+    .Frittata{
+        order:4;
+    }
+    .Burger{
+        order: 5;
+    }
+    .Crispy{
+        order: 6;
+    }
+    .kebab{
+        order:7;
+    }
     /* <---------End Gallery-------> */
 
     /* <---------Start contact-------> */
