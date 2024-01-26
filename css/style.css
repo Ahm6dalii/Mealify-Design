@@ -1075,8 +1075,8 @@ ul {
     body:has(.contact:target) li a[href="#contact"] {
     color:var(--color-secondary) !important;
 }
-a:hover{
-    color: #ffffff !important;
+.navbar .nav-menu  a:hover{
+    color: var(--color-secondary) !important;
  }
 
     /* ---------------- End-Navbar-------------- */
@@ -1095,7 +1095,7 @@ a:hover{
     }
 
     .gallery .garllery-img {
-        width: 29%;
+        width: 32%;
     }
 
     /* ----------------End Gallery -------------- */
