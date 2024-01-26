@@ -1107,7 +1107,7 @@ a:hover{
 
 
  /* <-----------------nav-section-------------> */
- a:hover{
+ .navbar .nav-menu a:hover{
     color: #171717;
  }
  :root:has(.menu-ch:checked) .nav-menu{
