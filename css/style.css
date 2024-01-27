@@ -10,6 +10,9 @@
     background-color: var(--color-select);
     color: var(--color-light-grey);
 }
+html{
+    scroll-behavior: smooth;
+}
 
 :root {
     --section-padding-t: 60px;
